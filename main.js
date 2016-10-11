@@ -7,9 +7,8 @@ document.querySelector("#thanks button").addEventListener('click',function(){
 document.querySelector("#double button").addEventListener('click',function(){
   // TASK #2
   var pNode = document.querySelector("p#compoundInvestment")
-  var double = parseInt(pNode) * 2
-  console.log(double)
-
+  var double = pNode.innerHTML * 2
+  pNode.innerHTML = double
 })
 
 
