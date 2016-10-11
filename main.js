@@ -24,6 +24,20 @@ var circle = document.querySelector('#circle-bw')
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
   // TASK #4}
+  var redCircle = document.querySelector(".circle-red")
+  var redCircleStyles = window.getComputedStyle(redCircle)
+  //console.log(redCircleStyles)
+  var redCircleWidth = parseInt(redCircleStyles.width)
+  redCircle.style.width = (redCircleWidth * 2) + "px"
+
+  var redCircleHeight = parseInt(redCircleStyles.height)
+  redCircle.style.height = (redCircleHeight * 2) + "px"
+
+	if (redCircleWidth >= 320) {
+ 	redCircle.style.width = 40 + "px"
+ 	redCircle.style.height = 40 + "px"
+}
+  console.log(redCircleWidth)
 })
 
 document.querySelector("#remove button").addEventListener('click',function(){
