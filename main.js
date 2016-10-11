@@ -1,10 +1,15 @@
 
 document.querySelector("#thanks button").addEventListener('click',function(){
   // TASK #1
+  alert("Yowch! don't click me so hard.")
 })
 
 document.querySelector("#double button").addEventListener('click',function(){
   // TASK #2
+  var pNode = document.querySelector("p#compoundInvestment")
+  var double = parseInt(pNode) * 2
+  console.log(double)
+
 })
 
 
