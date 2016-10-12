@@ -42,42 +42,29 @@ document.querySelector("#blow-up button").addEventListener('click',function(){
 
 document.querySelector("#remove button").addEventListener('click',function(){
   // TASK #5
-  var removeNode = document.querySelector('#userList ul')
-  var listItems = removeNode.children
-//this function will look at all the children of the node
-  for(var i = 0; i < listItems.length; i++){
-    var liNode = listItems[i]
-    //check whether its class includes "done"
-    if(liNode.classList.contains('Inactive')){
-      // remove it from its parent
-      removeNode.removeChild(liNode)
-
-    }
-  }
-
-
-var box5Node = document.querySelector('#box5 ul')
-
-})
-
 
 document.querySelector("#reverse-squares button").addEventListener('click',function(){
   // TASK #6
   var row = document.querySelector("#reverse-squares .answer-box")
  var rowOfSquares = row.querySelectorAll(".square")
- 	
- 
  for (var i = rowOfSquares.length; i--;) {
-  
  	row.appendChild(rowOfSquares[i])
- 
  }
- 	
-  })
+})
 
 
 document.querySelector("#pig-latin button").addEventListener('click',function(){
   // TASK #7
+  var taskList = document.querySelector("#pig-latin .answer-box")
+  var listItems = taskList.querySelectorAll("li")
+  for (var i = 0; i < listItems.length; i++) {
+	var split = listItems[i].innerHTML.split("")
+	//console.log(split)
+	var flipped = split.reverse()
+	//console.log(flipped)
+	listItems[i].innerHTML = flipped.join("")
+	// console.log(backwards)
+  }
 })
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
